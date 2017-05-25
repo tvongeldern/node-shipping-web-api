@@ -1,0 +1,8 @@
+Mon Jan 16 2017 12:50:08 GMT-0600 (CST) : Error: ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+
+Mon Jan 16 2017 12:50:08 GMT-0600 (CST) : INSERT INTO `reviews` ( `loadId`, `review`, `rating` ) VALUES ( undefined, "This carrier was amazing!", "5" ); 
+
+Mon Jan 16 2017 13:06:52 GMT-0600 (CST) : Error: ER_BAD_FIELD_ERROR: Unknown column 'unreviewed' in 'where clause'
+
+Mon Jan 16 2017 13:06:52 GMT-0600 (CST) : SELECT EXISTS ( SELECT `loadId` , NOT EXISTS ( SELECT `reviewId` FROM `reviews` WHERE `loadId`=1 ) AS `unreviewed` FROM `loads` WHERE `loadId`=1 AND `status` >= 7 AND ( `carrier`=2 OR `customer`=2 ) AND `unreviewed`=1 AND ( `carrier`=1 OR `customer`=1 ) ) AS `exists`; 
+

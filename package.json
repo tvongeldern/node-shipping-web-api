@@ -1,0 +1,21 @@
+{
+  "name": "web-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server.js",
+  "scripts": {
+    "endpoint": "python ./scripts/endpoint.py",
+    "db": "mysql.server start",
+    "stop": "mysql.server stop",
+    "sync-db": "node ./scripts/sync_db.js"
+  },
+  "author": "Tom von Geldern",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "child_process": "^1.0.2",
+    "fs": "0.0.1-security",
+    "hapi": "^15.2.0",
+    "mysql": "^2.12.0"
+  }
+}
